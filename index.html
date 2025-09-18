@@ -1,5 +1,405 @@
+<!DOCTYPE html>
 <html>
-  <body>
-    <h1>Hello World!</h1>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="exUMI: Extensible Robot Teaching System with Action-aware Task-agnostic Tactile Representation">
+  <meta name="keywords" content="exUMI, Tactile Sensing, Robot Learning, Imitation Learning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>exUMI: Extensible Robot Teaching System</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <!-- CSS Frameworks and Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  
+  <!-- Custom CSS -->
+  <style>
+    :root {
+      --theme-color: #4392F1;
+    }
+    .hero {
+      background-color: #f9f9f9;
+    }
+    .publication-title {
+      font-weight: bold;
+    }
+    .publication-authors {
+      margin-top: 1rem;
+    }
+    .author-block {
+      display: inline-block;
+      margin: 0.2rem;
+    }
+    .link-block {
+      margin: 0.5rem;
+    }
+    .button.is-dark {
+        background-color: var(--theme-color);
+        border-color: transparent;
+    }
+    .button.is-dark:hover {
+        background-color: #3a7fd0;
+    }
+    .button.is-dark.is-disabled {
+        background-color: #cccccc;
+    }
+    .section-title {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+    .content p {
+      line-height: 1.6;
+    }
+    .teaser-image {
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      margin: auto;
+      display: block;
+    }
+    .bibtex pre {
+      background-color: #f0f0f0;
+      border-radius: 6px;
+      padding: 1rem;
+    }
+    .download-configurator {
+      background-color: #ffffff;
+      padding: 2.5rem;
+      border-radius: 12px;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+      max-width: 960px;
+      margin: 2rem auto;
+    }
+    #filename-display {
+      margin-top: 1.5rem;
+      font-weight: 500;
+      color: #363636;
+      background-color: #f5f5f5;
+      padding: 0.75rem;
+      border-radius: 6px;
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .field.is-grouped.is-centered {
+        justify-content: center;
+    }
+  </style>
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6BPBZKDV09"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6BPBZKDV09');
+</script>
+
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">
+            exUMI: Extensible Robot Teaching System with Action-aware Task-agnostic Tactile Representation
+          </h1>
+          <h3 class="subtitle is-4">CoRL 2025</h3>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Yue Xu<sup>1</sup>,</span>
+            <span class="author-block">Litao Wei<sup>1</sup>,</span>
+            <span class="author-block">Pengyu An<sup>1</sup>,</span>
+            <span class="author-block">Qingyu Zhang<sup>1</sup>,</span>
+            <span class="author-block">Yong-Lu Li<sup>1,2*</sup></span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Shanghai Jiao Tong University,</span>
+            <span class="author-block"><sup>2</sup>Shanghai Innovation Institute</span>
+          </div>
+
+          <div style="text-align: center; margin: 2rem 0;">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/w10x873WgFM?si=gCkl7v-xDyGHv3nX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- Paper PDF Link -->
+              <!-- <span class="link-block">
+                <a href="#"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Arxiv</span>
+                </a>
+              </span> -->
+              <span class="link-block">
+                <a href="https://openreview.net/pdf?id=b86nyIOJWq"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Project Page Link -->
+              <span class="link-block">
+                <a href="https://silicx.github.io/exUMI"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-globe"></i>
+                  </span>
+                  <span>Assembly Guide (TBA)</span>
+                </a>
+              </span>
+              <!-- Code Link -->
+              <span class="link-block">
+                <a href="#"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (TBA)</span>
+                  </a>
+              </span>
+              <!-- Dataset Link -->
+              <!-- <span class="link-block">
+                <a href="#"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-database"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+              </span> -->
+              <!-- CAD Files Link
+              <span class="link-block">
+                <a href="#cad-download"
+                  class="button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-cube"></i>
+                  </span>
+                  <span>CAD Files</span>
+                  </a> -->
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CAD Model Downloader Section -->
+<section class="section" id="cad-download">
+  <div class="container is-max-desktop">
+    <div class="download-configurator">
+      <h2 class="title is-3 section-title has-text-centered">Download CAD Models</h2>
+      <p class="subtitle is-5 has-text-centered">Configure your hardware setup to get the correct CAD files.</p>
+      
+      <div class="field is-grouped is-centered">
+        <div class="control">
+          <div class="select is-rounded">
+            <select id="gripper-type">
+              <option value="">1. Select Gripper</option>
+              <option value="Grav">Flexiv Grav</option>
+              <option value="WSG">WSG</option>
+            </select>
+          </div>
+        </div>
+        <div class="control">
+          <div class="select is-rounded">
+            <select id="tracker-type">
+              <option value="">2. Select Tracker</option>
+              <option value="Quest">Meta Quest Tracker</option>
+              <option value="VIVE">HTC VIVE Ultimate Tracker</option>
+            </select>
+          </div>
+        </div>
+        <!-- <div class="control">
+          <div class="select is-rounded">
+            <select id="camera-type">
+              <option value="">3. Select Camera</option>
+              <option value="GoPro">GoPro</option>
+              <option value="USBCamera">USB Camera</option>
+            </select>
+          </div>
+        </div> -->
+        <div class="control">
+          <div class="select is-rounded">
+            <select id="sensor-type">
+              <option value="">3. Select Sensor</option>
+              <option value="9DTact">9DTact Sensor</option>
+              <option value="GelSight">GelSight Sensor</option>
+            </select>
+          </div>
+        </div>
+        <div class="has-text-centered">
+          <a id="download-button" class="button is-dark is-rounded" disabled>
+            <span class="icon"><i class="fas fa-download"></i></span>
+            <span>Download Files</span>
+          </a>
+        </div>
+      </div>
+      
+      <div id="filename-display" class="has-text-centered">
+        Please make a selection in all four dropdowns.
+      </div>
+    </div>
+  </div>
+</section>
+<!--/ CAD Model Downloader Section -->
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- Please replace this placeholder with the overview image from your paper -->
+      <img src="static/images/exUMI-system.png" 
+          alt="exUMI System Overview"
+          class="teaser-image">
+      <h2 class="subtitle has-text-centered" style="margin-top: 1.5rem;">
+        We present a co-designed hardware and algorithm system for tactile-aware robot learning. The exUMI hardware enhances data collection robustness and extensibility, while the TPP algorithm captures tactile dynamics through predictive learning.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 section-title">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Tactile-aware robot learning faces critical challenges in data collection and representation due to data scarcity and sparsity, and the absence of force feedback in existing systems. To address these limitations, we introduce a tactile robot learning system with both hardware and algorithm innovations. We present exUMI, an extensible data collection device that enhances the vanilla UMI with robust proprioception (via AR MoCap and rotary encoder), modular visuo-tactile sensing, and automated calibration, achieving 100% data usability. Building on an efficient collection of over 1 M tactile frames, we propose Tactile Prediction Pretraining (TPP), a representation learning framework through action-aware temporal tactile prediction, capturing contact dynamics and mitigating tactile sparsity. Real-world experiments show that TPP outperforms traditional tactile imitation learning. Our work bridges the gap between human tactile intuition and robot learning through co-designed hardware and algorithms, offering open-source resources to advance contact-rich manipulation research.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract -->
+
+    <!-- System Architecture -->
+    <div class="columns is-centered">
+      <div class="column">
+        <h2 class="title is-3 section-title has-text-centered">Hardware System: exUMI</h2>
+        <!-- Please replace this placeholder with the hardware image from your paper -->
+        <div style="text-align: center;">
+          <img src="static/images/hardware.png" alt="exUMI Hardware System" style="width: 50%; border-radius: 8px; margin-bottom: 1rem;">
+        </div>
+        <p>
+          exUMI extends the UMI framework by disentangling proprioception using an AR motion capture system (Meta Quest 3) and a magnetic rotary encoder for precise gripper width measurement. A central controller with automatic latency calibration enables seamless integration of additional sensors, such as visuo-tactile sensors, while maintaining maximum mobility.
+        </p>
+      </div>
+      <div class="column">
+        <h2 class="title is-3 section-title has-text-centered">Algorithm: Tactile Predictive Pretraining (TPP)</h2>
+        <!-- Please replace this placeholder with the algorithm pipeline image from your paper -->
+        <div style="text-align: center;">
+          <img src="static/images/pipeline.png" alt="TPP Algorithm Pipeline" style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
+        </div>
+        <p>
+          Our proposed TPP framework formulates tactile representation learning as a conditional future prediction task. By learning to predict future tactile frames conditioned on the action sequence and the current camera image, the model captures rich physical contact dynamics. The pretrained tactile encoder can be seamlessly integrated into downstream imitation learning policies.
+        </p>
+      </div>
+    </div>
+    <!--/ System Architecture -->
+
+  </div>
+</section>
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content bibtex">
+    <h2 class="title section-title has-text-centered">BibTeX</h2>
+    <pre><code>@inproceedings{xu2025exumi,
+  title     = {exUMI: Extensible Robot Teaching System with Action-aware Task-agnostic Tactile Representation},
+  author    = {Xu, Yue and Wei, Litao and An, Pengyu and Zhang, Qingyu and Li, Yong-Lu},
+  booktitle = {Conference on Robot Learning (CoRL)},
+  year      = {2025}
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p class="has-text-centered">
+            This website template is adapted from the open-source code of the <a href="https://nerfies.github.io/">Nerfies</a> project.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const gripperSelect = document.getElementById('gripper-type');
+    const trackerSelect = document.getElementById('tracker-type');
+    // const cameraSelect = document.getElementById('camera-type');
+    const sensorSelect = document.getElementById('sensor-type');
+    const downloadBtn = document.getElementById('download-button');
+    const filenameDisplay = document.getElementById('filename-display');
+
+    function updateDownloadState() {
+        const gripper = gripperSelect.value;
+        const tracker = trackerSelect.value;
+        // const camera = cameraSelect.value;
+        const sensor = sensorSelect.value;
+
+        if (gripper && tracker && sensor) {
+            // All options selected, enable the button
+            const filename = `exUMI-CAD-${gripper}-${tracker}-${sensor}.zip`;
+
+            if(false) {
+              filenameDisplay.innerHTML = `<strong>File:</strong> ${filename}`;
+              // IMPORTANT: Replace './cad/' with your actual file path
+              downloadBtn.href = `./cad/${filename}`; 
+              downloadBtn.classList.remove('is-disabled');
+              downloadBtn.removeAttribute('disabled');
+            } else {
+              filenameDisplay.innerHTML = `<strong>File:</strong> <em>(will be available soon)</em>`;
+              downloadBtn.href = '#';
+              downloadBtn.classList.add('is-disabled');
+              downloadBtn.setAttribute('disabled', 'true');
+            }
+
+        } else {
+            // Not all options selected, disable the button
+            filenameDisplay.textContent = 'Please make a selection in all three dropdowns.';
+            downloadBtn.href = '#';
+            downloadBtn.classList.add('is-disabled');
+            downloadBtn.setAttribute('disabled', 'true');
+        }
+    }
+
+    // Add event listeners to all select dropdowns
+    gripperSelect.addEventListener('change', updateDownloadState);
+    trackerSelect.addEventListener('change', updateDownloadState);
+    sensorSelect.addEventListener('change', updateDownloadState);
+
+    // Set the initial state on page load
+    updateDownloadState();
+});
+</script>
+
+</body>
 </html>
+
