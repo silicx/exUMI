@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-KNRNZG94');</script>
-  <!-- End Google Tag Manager -->
-  
   <meta charset="utf-8">
   <meta name="description"
         content="exUMI: Extensible Robot Teaching System with Action-aware Task-agnostic Tactile Representation">
@@ -114,11 +106,6 @@
 </script>
 
 <body>
-
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KNRNZG94"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 
 <section class="hero">
   <div class="hero-body">
@@ -260,7 +247,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
         <div class="has-text-centered">
-          <a id="download-button" class="button is-dark is-rounded" disabled>
+          <a id="download-button" class="button is-dark is-rounded" disabled
+            onclick="handleDownload(this); return false;">
             <span class="icon"><i class="fas fa-download"></i></span>
             <span>Download Files</span>
           </a>
@@ -417,6 +405,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set the initial state on page load
     updateDownloadState();
 });
+
+
+function handleDownload(el) {
+  const url   = el.href;
+  const fname = url.substring(url.lastIndexOf('/') + 1);
+  gtag('event', 'download', {
+    file_name: fname,
+    event_category: 'CAD',
+    transport_type: 'beacon'
+  });
+  setTimeout(() => {
+    window.open(url, '_blank');
+  }, 300); // Delay to ensure the event is sent
+}
+
 </script>
 
 </body>
