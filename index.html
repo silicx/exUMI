@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KNRNZG94');</script>
+  <!-- End Google Tag Manager -->
+  
   <meta charset="utf-8">
   <meta name="description"
         content="exUMI: Extensible Robot Teaching System with Action-aware Task-agnostic Tactile Representation">
@@ -107,6 +115,11 @@
 
 <body>
 
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KNRNZG94"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
@@ -135,15 +148,15 @@
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- Paper PDF Link -->
-              <!-- <span class="link-block">
-                <a href="#"
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2509.14688"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
                   <span>Arxiv</span>
                 </a>
-              </span> -->
+              </span>
               <span class="link-block">
                 <a href="https://openreview.net/pdf?id=b86nyIOJWq"
                   class="external-link button is-normal is-rounded is-dark">
@@ -366,19 +379,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (gripper && tracker && sensor) {
             // All options selected, enable the button
-            const filename = `exUMI-CAD-${gripper}-${tracker}-${sensor}.zip`;
+            const filename = `exUMI-${gripper}-${tracker}-${sensor}.zip`;
 
-            if(false) {
-              filenameDisplay.innerHTML = `<strong>File:</strong> ${filename}`;
-              // IMPORTANT: Replace './cad/' with your actual file path
-              downloadBtn.href = `./cad/${filename}`; 
-              downloadBtn.classList.remove('is-disabled');
-              downloadBtn.removeAttribute('disabled');
-            } else {
-              filenameDisplay.innerHTML = `<strong>File:</strong> <em>(will be available soon)</em>`;
-              downloadBtn.href = '#';
+            let download_href = null;
+            if(filename === 'exUMI-Grav-Quest-9DTact.zip') {
+              download_href = 'https://drive.google.com/file/d/1pYaqFy7wvAXi1K3ulR-KljmocqWIKayQ/view?usp=sharing';
+            } else if(filename === 'exUMI-Grav-VIVE-9DTact.zip') {
+              download_href = 'https://drive.google.com/file/d/1MKr7CKiaKrcdg_8FPkSLqUQ0_4HBoXZX/view?usp=sharing';
+            }
+
+            if(download_href === null) {
+              filenameDisplay.innerHTML = `<strong>File:</strong> ${filename} <em>(will be available soon)</em>`;
+              downloadBtn.href = download_href;
               downloadBtn.classList.add('is-disabled');
               downloadBtn.setAttribute('disabled', 'true');
+            } else {
+              filenameDisplay.innerHTML = `<strong>File:</strong> ${filename}`;
+              downloadBtn.href = download_href; 
+              downloadBtn.classList.remove('is-disabled');
+              downloadBtn.removeAttribute('disabled');
             }
 
         } else {
