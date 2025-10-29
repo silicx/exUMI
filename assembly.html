@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="exUMI: Extensible Robot Teaching System with Action-aware Task-agnostic Tactile Representation">
+  <meta name="keywords" content="exUMI, Tactile Sensing, Robot Learning, Imitation Learning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>exUMI: Extensible Robot Teaching System</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <!-- CSS Frameworks and Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  
+  <!-- Custom CSS -->
+  <style>
+    :root {
+      --theme-color: #4392F1;
+    }
+    .hero {
+      background-color: #f9f9f9;
+    }
+    .publication-title {
+      font-weight: bold;
+    }
+    .publication-authors {
+      margin-top: 1rem;
+    }
+    .author-block {
+      display: inline-block;
+      margin: 0.2rem;
+    }
+    .link-block {
+      margin: 0.5rem;
+    }
+    .button.is-dark {
+        background-color: var(--theme-color);
+        border-color: transparent;
+    }
+    .button.is-dark:hover {
+        background-color: #3a7fd0;
+    }
+    .button.is-dark.is-disabled {
+        background-color: #cccccc;
+    }
+    .section-title {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+    .content p {
+      line-height: 1.6;
+    }
+    .teaser-image {
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      margin: auto;
+      display: block;
+    }
+    .bibtex pre {
+      background-color: #f0f0f0;
+      border-radius: 6px;
+      padding: 1rem;
+    }
+    .download-configurator {
+      background-color: #ffffff;
+      padding: 2.5rem;
+      border-radius: 12px;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+      max-width: 960px;
+      margin: 2rem auto;
+    }
+    #filename-display {
+      margin-top: 1.5rem;
+      font-weight: 500;
+      color: #363636;
+      background-color: #f5f5f5;
+      padding: 0.75rem;
+      border-radius: 6px;
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .field.is-grouped.is-centered {
+        justify-content: center;
+    }
+    .assembly-step {
+      margin-bottom: 2rem;
+    }
+    .assembly-image {
+      margin: 1rem auto;
+      display: block;
+      border-radius: 8px;
+    }
+    .image-row {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        flex-wrap: wrap;
+        margin: 1rem 0;
+    }
+  </style>
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6BPBZKDV09"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6BPBZKDV09');
+</script>
+
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">
+            Assembly Guide
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Assembly Guide Section -->
+<section class="section" id="assembly-guide">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 section-title has-text-centered">Assembly of exUMI Skeleton</h2>
+    
+    <div><p><strong>Acknowledgement</strong>: Thanks Pengyu for writing this guide. Please let us know if anything is unclear.</p><br/></div>
+    
+    <!-- Overview -->
+    <div class="content">
+      <h3 class="title is-4">Overview</h3>
+      <p>All the 3D printed models and tools required for assembling the skeleton of exUMI are as follows (using Flexiv Grav for Gripper, Meta Quest for Tracker and 9DTact for Sensor on our <a href="https://silicx.github.io/exUMI/">website</a>).</p>
+      
+      <div class="has-text-centered">
+        <img src="./static/assembly/1.jpg" width="600" class="assembly-image" alt="exUMI Assembly Overview">
+      </div>
+      
+      <p>Specifically, the nuts and screws needed in the assembly process are as shown in the following table.</p>
+      
+      <table class="table is-striped is-hoverable is-fullwidth">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Part Name</th>
+            <th>Quantity</th>
+            <th>Purpose</th>
+            <th>Auxiliary Tools</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Nut</td>
+            <td>M3 Hex Nut</td>
+            <td>12</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Nut</td>
+            <td>M5 Hex Nut</td>
+            <td>4</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Screw</td>
+            <td>M3*8 Flat Head Screw</td>
+            <td>4</td>
+            <td>Fixing handle and bottom plate</td>
+            <td>A small flat-head screwdriver</td>
+          </tr>
+          <tr>
+            <td>Screw</td>
+            <td>M3*18*M4 Socket Head Cap Screw</td>
+            <td>4</td>
+            <td>Fixing gripper arm</td>
+            <td>An H2 hex key</td>
+          </tr>
+          <tr>
+            <td>Screw</td>
+            <td>M5*30*Φ6 Hex Socket Cap Screw</td>
+            <td>4</td>
+            <td>Fixing top cover, bottom plate and the middle gripper arm</td>
+            <td>An H4 hex key</td>
+          </tr>
+          <tr>
+            <td>Screw</td>
+            <td>M3*35 Socket Head Cap Screw</td>
+            <td>2</td>
+            <td>Fixing top cover and bottom plate</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Screw</td>
+            <td>M3*20 Socket Head Cap Screw</td>
+            <td>2</td>
+            <td>Fixing orangepi mount</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <!-- Steps -->
+    <div class="content">
+      <h3 class="title is-4">Steps</h3>
+      <p><em>Note: The assembly steps are not unique and are for reference only.</em></p>
+      
+      <div class="assembly-step">
+        <h4 class="title is-5">1. Place the four M5 Hex nuts in the four grooves in the middle of the back of the bottom plate.</h4>
+        <div class="has-text-centered">
+          <img src="./static/assembly/2.jpg" width="200" class="assembly-image" alt="Step 1">
+        </div>
+      </div>
+      
+      <div class="assembly-step">
+        <h4 class="title is-5">2. Turn the handle upside down and align its grooves with the four nuts on the bottom plate. Then turn the whole thing over, and be careful not to drop the nuts.</h4>
+        <div class="has-text-centered image-row">
+          <img src="./static/assembly/3.jpg" width="200" class="assembly-image" alt="Step 2a">
+          <img src="./static/assembly/4.jpg" width="200" class="assembly-image" alt="Step 2b">
+        </div>
+      </div>
+      
+      <div class="assembly-step">
+        <h4 class="title is-5">3. Fix the handle and the bottom plate together using four M3*8 Flat Head screws and M3 Hex nuts.</h4>
+        <div class="has-text-centered image-row">
+          <img src="./static/assembly/5.jpg" width="200" class="assembly-image" alt="Step 3a">
+          <img src="./static/assembly/6.jpg" width="200" class="assembly-image" alt="Step 3b">
+        </div>
+      </div>
+      
+      <div class="assembly-step">
+        <h4 class="title is-5">4. Now let's start assembling the gripper arm. Prepare the four models shown in the following figures (pay attention to their relative positions) and fix them using two M3*18*M4 Socket Head Cap screws and M3 Hex nuts to get the left gripper. We have also shown a picture of the left gripper turned over below.</h4>
+        <div class="has-text-centered image-row">
+          <img src="./static/assembly/7.jpg" width="200" class="assembly-image" alt="Step 4a">
+          <img src="./static/assembly/8.jpg" width="200" class="assembly-image" alt="Step 4b">
+          <img src="./static/assembly/9.jpg" width="200" class="assembly-image" alt="Step 4c">
+        </div>
+      </div>
+      
+      <div class="assembly-step">
+        <h4 class="title is-5">5. The assembly of the right arm is similar, symmetrical to that of the left arm.</h4>
+        <div class="has-text-centered image-row">
+          <img src="./static/assembly/10.jpg" width="200" class="assembly-image" alt="Step 5a">
+          <img src="./static/assembly/11.jpg" width="200" class="assembly-image" alt="Step 5b">
+          <img src="./static/assembly/12.jpg" width="200" class="assembly-image" alt="Step 5c">
+        </div>
+      </div>
+      
+      <div class="assembly-step">
+        <h4 class="title is-5">6. Next, we can easily put the grippers on the bottom plate follow the pictures below.</h4>
+        <div class="has-text-centered image-row">
+          <img src="./static/assembly/13.jpg" width="200" class="assembly-image" alt="Step 6a">
+          <img src="./static/assembly/14.jpg" width="200" class="assembly-image" alt="Step 6b">
+          <img src="./static/assembly/15.jpg" width="200" class="assembly-image" alt="Step 6c">
+        </div>
+      </div>
+      
+      <div class="assembly-step">
+        <h4 class="title is-5">7. Next, we are going to use four M5*30*Φ6 Hex Socket Cap Screw to fix the top cover, bottom plate and the middle gripper arm. Before fixing, first ensure that the four circular holes on the gripper are completely aligned with the holes on the bottom plate, as shown in the following figures. Then pass the M5*30*Φ6 Hex Socket Cap Screw through the top cover, gripper and bottom plate in sequence and slightly tighten the screws.</h4>
+        <div class="has-text-centered image-row">
+          <img src="./static/assembly/16.jpg" width="200" class="assembly-image" alt="Step 7a">
+          <img src="./static/assembly/17.jpg" width="200" class="assembly-image" alt="Step 7b">
+          <img src="./static/assembly/18.jpg" width="200" class="assembly-image" alt="Step 7c">
+          <img src="./static/assembly/19.jpg" width="200" class="assembly-image" alt="Step 7d">
+          <img src="./static/assembly/20.jpg" width="200" class="assembly-image" alt="Step 7e">
+        </div>
+      </div>
+      
+      <div class="assembly-step">
+        <h4 class="title is-5">8. Fix top cover and bottom plate at the back of exUMI with two M3*35 Socket Head Cap Screws and M3 Hex nuts.</h4>
+        <div class="has-text-centered">
+          <img src="./static/assembly/21.jpg" width="200" class="assembly-image" alt="Step 8">
+        </div>
+      </div>
+      
+      <div class="assembly-step">
+        <h4 class="title is-5">9. Fix the orangepi mount with two M3*20 Socket Head Cap Screws and M3 Hex nuts.</h4>
+        <div class="has-text-centered">
+          <img src="./static/assembly/22.jpg" width="200" class="assembly-image" alt="Step 9">
+        </div>
+      </div>
+      
+      <div class="assembly-step">
+        <h4 class="title is-5">10. Finally, we have assembled the skeleton of exUMI!</h4>
+        <div class="has-text-centered">
+          <img src="./static/assembly/23.jpg" width="200" class="assembly-image" alt="Step 10">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/ Assembly Guide Section -->
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content bibtex">
+    <h2 class="title section-title has-text-centered">BibTeX</h2>
+    <pre><code>@inproceedings{xu2025exumi,
+  title     = {exUMI: Extensible Robot Teaching System with Action-aware Task-agnostic Tactile Representation},
+  author    = {Xu, Yue and Wei, Litao and An, Pengyu and Zhang, Qingyu and Li, Yong-Lu},
+  booktitle = {Conference on Robot Learning (CoRL)},
+  year      = {2025}
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p class="has-text-centered">
+            This website template is adapted from the open-source code of the <a href="https://nerfies.github.io/">Nerfies</a> project.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>

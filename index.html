@@ -19,80 +19,7 @@
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   
   <!-- Custom CSS -->
-  <style>
-    :root {
-      --theme-color: #4392F1;
-    }
-    .hero {
-      background-color: #f9f9f9;
-    }
-    .publication-title {
-      font-weight: bold;
-    }
-    .publication-authors {
-      margin-top: 1rem;
-    }
-    .author-block {
-      display: inline-block;
-      margin: 0.2rem;
-    }
-    .link-block {
-      margin: 0.5rem;
-    }
-    .button.is-dark {
-        background-color: var(--theme-color);
-        border-color: transparent;
-    }
-    .button.is-dark:hover {
-        background-color: #3a7fd0;
-    }
-    .button.is-dark.is-disabled {
-        background-color: #cccccc;
-    }
-    .section-title {
-      margin-top: 2rem;
-      margin-bottom: 1rem;
-      font-weight: bold;
-    }
-    .content p {
-      line-height: 1.6;
-    }
-    .teaser-image {
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      margin: auto;
-      display: block;
-    }
-    .bibtex pre {
-      background-color: #f0f0f0;
-      border-radius: 6px;
-      padding: 1rem;
-    }
-    .download-configurator {
-      background-color: #ffffff;
-      padding: 2.5rem;
-      border-radius: 12px;
-      border: 1px solid #e0e0e0;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.07);
-      max-width: 960px;
-      margin: 2rem auto;
-    }
-    #filename-display {
-      margin-top: 1.5rem;
-      font-weight: 500;
-      color: #363636;
-      background-color: #f5f5f5;
-      padding: 0.75rem;
-      border-radius: 6px;
-      min-height: 48px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .field.is-grouped.is-centered {
-        justify-content: center;
-    }
-  </style>
+  <link rel="stylesheet" href="static/css/exumi-customized.css">
 </head>
 
 <!-- Google tag (gtag.js) -->
@@ -155,12 +82,12 @@
               </span>
               <!-- Project Page Link -->
               <span class="link-block">
-                <a href="https://silicx.github.io/exUMI"
+                <a href="assembly.html"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-globe"></i>
                   </span>
-                  <span>Assembly Guide (TBA)</span>
+                  <span>Assembly Guide</span>
                 </a>
               </span>
               <!-- Code Link -->
@@ -224,6 +151,7 @@
             <select id="tracker-type">
               <option value="">2. Select Tracker</option>
               <option value="Quest">Meta Quest Tracker</option>
+              <option value="RoboBaton">Hessian-Matrix RoboBaton</option>
               <option value="VIVE">HTC VIVE Ultimate Tracker</option>
             </select>
           </div>
@@ -261,9 +189,18 @@
     </div>
   </div>
 </section>
-<!--/ CAD Model Downloader Section -->
 
-<section class="hero teaser">
+
+<section class="updates-section" id="updates">
+  <div class="updates-title">Latest Updates</div>
+  <div class="updates-content">
+    <div class="update-item"><span class="update-date">Oct 2025</span>: <a href="./assembly.html">Assembly guide</a> published</div>
+    <div class="update-item"><span class="update-date">Sep 2025</span>: Initial Launch. Paper and CAD files are released.</div>
+  </div>
+</section>
+
+
+<section class="teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <!-- Please replace this placeholder with the overview image from your paper -->
