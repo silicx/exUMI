@@ -1,0 +1,299 @@
+<?xml version="1.0" ?>
+<robot name="flexiv_GN01">
+
+  <!-- base link -->
+  <link name="base_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0.057"/>
+      <mass value="1.186"/>
+      <inertia ixx="3E-3" ixy="0" ixz="0" iyy="3E-3" iyz="-0" izz="1E-3"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 1.5707963267948966" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/grav/visual/base.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="flexiv_black"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 1.5707963267948966" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/grav/collision/base.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- left finger links -->
+  <link name="left_outer_bar">
+    <inertial>
+        <origin xyz="0 0 0.029" rpy="0 0 0" />
+        <mass value="1E-4" />
+        <inertia ixx="1E-7" ixy="0" ixz="0" iyy="1E-7" iyz="0" izz="1E-7" />
+    </inertial>
+    <visual>
+      <origin rpy="0 0 1.5707963267948966" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/grav/visual/outer_bar.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="flexiv_black"/>
+    </visual>
+  </link>
+  <link name="left_inner_bar">
+    <inertial>
+        <origin xyz="0 0 0.029" rpy="0 0 0" />
+       <mass value="1E-4" />
+        <inertia ixx="1E-7" ixy="0" ixz="0" iyy="1E-7" iyz="0" izz="1E-7" />
+    </inertial>
+    <visual>
+      <origin rpy="0 0 1.5707963267948966" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/grav/visual/inner_bar.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="flexiv_black"/>
+    </visual>
+  </link>
+  <link name="left_finger_mount">
+    <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <mass value="1E-4" />
+        <inertia ixx="1E-7" ixy="0" ixz="0" iyy="1E-7" iyz="0" izz="1E-7" />
+    </inertial>
+    <visual>
+      <origin rpy="0 0 1.5707963267948966" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/grav/visual/finger_mount.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="flexiv_black"/>
+    </visual>
+  </link>
+  <link name="left_finger_tip">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 1.5707963267948966" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/grav/visual/finger_tip.obj" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 1.5707963267948966" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/grav/collision/finger_tip.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- right finger links -->
+  <link name="right_outer_bar">
+    <inertial>
+        <origin xyz="0 0 0.029" rpy="0 0 0" />
+        <mass value="1E-4" />
+        <inertia ixx="1E-7" ixy="0" ixz="0" iyy="1E-7" iyz="0" izz="1E-7" />
+    </inertial>
+    <visual>
+      <origin rpy="0 0 1.5707963267948966" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/grav/visual/outer_bar.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="flexiv_black"/>
+    </visual>
+  </link>
+  <link name="right_inner_bar">
+    <inertial>
+        <origin xyz="0 0 0.029" rpy="0 0 0" />
+        <mass value="1E-4" />
+        <inertia ixx="1E-7" ixy="0" ixz="0" iyy="1E-7" iyz="0" izz="1E-7" />
+    </inertial>
+    <visual>
+      <origin rpy="0 0 1.5707963267948966" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/grav/visual/inner_bar.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="flexiv_black"/>
+    </visual>
+  </link>
+  <link name="right_finger_mount">
+    <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <mass value="1E-4" />
+        <inertia ixx="1E-7" ixy="0" ixz="0" iyy="1E-7" iyz="0" izz="1E-7" />
+    </inertial>
+    <visual>
+      <origin rpy="0 0 1.5707963267948966" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/grav/visual/finger_mount.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="flexiv_black"/>
+    </visual>
+  </link>
+  <link name="right_finger_tip">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 1.5707963267948966" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/grav/visual/finger_tip.obj" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 1.5707963267948966" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/grav/collision/finger_tip.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- TCP links -->
+  <link name="tcp"><!-- open finger, used by RCA -->
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+  </link>
+  <link name="closed_fingers_tcp">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+  </link>
+  <link name="left_finger_tcp">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+  </link>
+  <link name="right_finger_tcp">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+  </link>
+
+  <joint name="open_fingers_tcp_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.15"/>
+    <parent link="base_link"/>
+    <child link="tcp"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+
+  <joint name="closed_fingers_tcp_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.20"/>
+    <parent link="base_link"/>
+    <child link="closed_fingers_tcp"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+
+  <!-- left finger joints -->
+  <joint name="left_outer_knuckle_joint" type="revolute">
+    <origin rpy="0 0 0" xyz="0 -0.0325 0.0825"/>
+    <parent link="base_link"/>
+    <child link="left_outer_bar"/>
+    <axis xyz="1 0 0"/>
+    <limit effort="0" lower="-0.155" upper="0.7854" velocity="2.0"/>
+    <mimic joint="finger_width_joint" multiplier="9.404" offset="-0.155"/>
+  </joint>
+  <joint name="left_inner_knuckle_joint" type="revolute">
+    <origin rpy="0 0 0" xyz="0 -0.0165 0.0995"/>
+    <parent link="base_link"/>
+    <child link="left_inner_bar"/>
+    <axis xyz="1 0 0"/>
+    <limit effort="0" lower="-0.155" upper="0.7854" velocity="2.0"/>
+    <mimic joint="left_outer_knuckle_joint" multiplier="1" offset="0"/>
+  </joint>
+  <joint name="left_inner_finger_joint" type="revolute">
+    <origin rpy="0 0 0" xyz="0 0 0.058"/>
+    <parent link="left_outer_bar"/>
+    <child link="left_finger_mount"/>
+    <axis xyz="1 0 0"/>
+    <limit effort="0" lower="-0.7854" upper="0.155" velocity="2.0"/>
+    <mimic joint="left_outer_knuckle_joint" multiplier="-1" offset="0"/>
+  </joint>
+  <joint name="left_inner_finger_pad_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0.010 0.0235"/>
+    <parent link="left_finger_mount"/>
+    <child link="left_finger_tip"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+  <joint name="left_finger_tcp_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0.0135 0.036"/>
+    <parent link="left_finger_tip"/>
+    <child link="left_finger_tcp"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+
+  <!-- right finger joints -->
+  <joint name="right_outer_knuckle_joint" type="revolute">
+    <origin rpy="0 0 3.141592653589793" xyz="0 0.0325 0.0825"/>
+    <parent link="base_link"/>
+    <child link="right_outer_bar"/>
+    <axis xyz="1 0 0"/>
+    <limit effort="0" lower="-0.155" upper="0.7854" velocity="2.0"/>
+    <mimic joint="left_outer_knuckle_joint" multiplier="1" offset="0"/>
+  </joint>
+  <joint name="right_inner_knuckle_joint" type="revolute">
+    <origin rpy="0 0 3.141592653589793" xyz="0 0.0165 0.0995"/>
+    <parent link="base_link"/>
+    <child link="right_inner_bar"/>
+    <axis xyz="1 0 0"/>
+    <limit effort="0" lower="-0.155" upper="0.7854" velocity="2.0"/>
+    <mimic joint="left_outer_knuckle_joint" multiplier="1" offset="0"/>
+  </joint>
+  <joint name="right_inner_finger_joint" type="revolute">      
+    <origin rpy="0 0 0" xyz="0 0 0.058"/>
+    <parent link="right_outer_bar"/>
+    <child link="right_finger_mount"/>
+    <axis xyz="1 0 0"/>
+    <limit effort="0" lower="-0.7854" upper="0.155" velocity="2.0"/>
+    <mimic joint="left_outer_knuckle_joint" multiplier="-1" offset="0"/>
+  </joint>
+  <joint name="right_inner_finger_pad_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0.010 0.0235"/>
+    <parent link="right_finger_mount"/>
+    <child link="right_finger_tip"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+  <joint name="right_finger_tcp_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0.0135 0.036"/>
+    <parent link="right_finger_tip"/>
+    <child link="right_finger_tcp"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+
+  <!-- 
+  Control joint.
+  Should we replace this with transmission?
+  Note: This virtual joint should be prismatic, 
+        but it must be revolute to match the mimic joint.
+        The unused link cannot have 0 mass.
+  -->
+  <joint name="finger_width_joint" type="revolute">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="unused_finger_width_link"/>
+    <axis xyz="1 0 0"/>
+    <limit effort="80" lower="0" upper="0.100" velocity="0.2"/>
+  </joint>
+
+  <link name="unused_finger_width_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="1E-4"/>
+      <inertia ixx="1E-7" ixy="0" ixz="0" iyy="1E-7" iyz="0" izz="1E-7"/>
+    </inertial>
+  </link>
+
+   <!-- materials -->
+  <material name="flexiv_black">
+    <color rgba="0.22 0.22 0.22 1"/>
+  </material>
+</robot>
