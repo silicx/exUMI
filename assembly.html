@@ -132,6 +132,30 @@
           </h1>
         </div>
       </div>
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <div class="publication-links">
+            <span class="link-block">
+              <a href="#part1"
+                class="external-link button is-normal is-rounded is-dark">
+                <span>Part 1: Skeleton</span>
+              </a>
+            </span>
+            <!-- Project Page Link -->
+            <span class="link-block">
+              <a href="#part2"
+                class="external-link button is-normal is-rounded is-dark">
+                <span>Part 2: Electronics</span>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+            We take our default recipe as an example (Flexiv Grav for Gripper + Meta Quest for Tracker + 9DTact)
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -139,14 +163,14 @@
 <!-- Assembly Guide Section -->
 <section class="section" id="assembly-guide">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 section-title has-text-centered">Assembly of exUMI Skeleton</h2>
+    <h2 class="title is-3 section-title has-text-centered" id="part1">Part 1: exUMI Skeleton</h2>
     
-    <div><p><strong>Acknowledgement</strong>: Thanks Pengyu for writing this guide. Please let us know if anything is unclear.</p><br/></div>
+    <div><p><strong>Acknowledgement</strong>: Thanks Pengyu for writing this part. Please let us know if anything is unclear.</p><br/></div>
     
     <!-- Overview -->
     <div class="content">
       <h3 class="title is-4">Overview</h3>
-      <p>All the 3D printed models and tools required for assembling the skeleton of exUMI are as follows (using Flexiv Grav for Gripper, Meta Quest for Tracker and 9DTact for Sensor on our <a href="https://silicx.github.io/exUMI/">website</a>).</p>
+      <p>All the 3D printed models and tools required for assembling the skeleton of exUMI are as follows.</p>
       
       <div class="has-text-centered">
         <img src="./static/assembly/1.jpg" width="600" class="assembly-image" alt="exUMI Assembly Overview">
@@ -221,7 +245,7 @@
     <!-- Steps -->
     <div class="content">
       <h3 class="title is-4">Steps</h3>
-      <p><em>Note: The assembly steps are not unique and are for reference only.</em></p>
+      <!-- <p><em>Note: The assembly steps are not unique and are for reference only.</em></p> -->
       
       <div class="assembly-step">
         <h4 class="title is-5">1. Place the four M5 Hex nuts in the four grooves in the middle of the back of the bottom plate.</h4>
@@ -304,6 +328,136 @@
           <img src="./static/assembly/23.jpg" width="200" class="assembly-image" alt="Step 10">
         </div>
       </div>
+
+
+      <div class="assembly-step">
+        <h4 class="title is-5">11. Make two <a href="https://linchangyi1.github.io/9DTact/">9DTact</a> tactile sensors and screw them on the fingertips.</h4>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/ Assembly Guide Section -->
+
+
+
+
+<!-- Assembly Guide Section -->
+<section class="section" id="assembly-guide">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 section-title has-text-centered" id="part2">Part 2:  Electronic Components</h2>
+    
+    <!-- Overview -->
+    <div class="content">
+      <h3 class="title is-4">BOM</h3>
+      
+      <table class="table is-striped is-hoverable is-fullwidth">
+        <thead>
+          <tr>
+            <th>Part Name</th>
+            <th>Quantity</th>
+            <th>Amazon Link</th>
+            <th>Taobao Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Raspberry Pi-4/5 or Orangepi 4B</td>
+            <td>1</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>AS5600 Board and magnet</td>
+            <td>1</td>
+            <td><a href="https://www.amazon.com/Magnetic-Encoder-Induction-Measurement-Precision/dp/B094F8H591">AS5600</a>; <a href="https://www.amazon.com/FINDMAG-Magnets-Magnetic-Whiteboard-Refrigerator/dp/B0B5GHPXGK">Magnet</a></td>
+            <td><a href="https://e.tb.cn/h.TOa7OzfhMTVtYRG?tk=nibJeeSO9NN">Suite</a></td>
+          </tr>
+          <tr>
+            <td>Meta Quest 3/3S</td>
+            <td>1</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Powerbank</td>
+            <td>1</td>
+            <td></td>
+            <td><a href="https://3.cn/2wNJpE-c?jkl=@T9fOdCnMBV@">Pisen</a></td>
+          </tr>
+          <tr>
+            <td>Dupon cables 10cm (female)</td>
+            <td>5</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>M3 Heat-stake Inserts</td>
+            <td>4</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>M3x8 screws</td>
+            <td>4</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>M2 screw</td>
+            <td>1</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>M3x4 flat-head screws</td>
+            <td>2</td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+      
+    
+    <!-- Steps -->
+    <div class="content">
+      <h3 class="title is-4">Steps</h3>
+      
+      <div class="assembly-step">
+        <h4 class="title is-5">1. Seat the heat-stake inserts to the Orangepi mount.</h4>
+        <div class="has-text-centered">
+          <img src="./static/assembly/2-1.png" width="200" class="assembly-image" alt="Step 1">
+        </div>
+      </div>
+      <div class="assembly-step">
+        <h4 class="title is-5">2. Use M3x8 screws to secure the Orangepi mount, the OrangePi/RaspberryPi and the Quest controller mount in a <i>sandwich</i> manner</h4>
+        <div class="has-text-centered image-row">
+          <img src="./static/assembly/2-2.jpg" width="200" class="assembly-image" alt="Step 2">
+        </div>
+      </div>
+      <div class="assembly-step">
+        <h4 class="title is-5">3. Glue the magnet to the seat and screw the magnet seat to the bar. Place the AS5600 board face down and secure it with M3x4 screws.</h4>
+        <div class="has-text-centered image-row">
+          <img src="./static/assembly/2-3.png" width="400" class="assembly-image" alt="Step 3">
+        </div>
+      </div>
+      <div class="assembly-step">
+        <h4 class="title is-5">4. Connect the AS5600 and the Raspberry Pi/Orange Pi following the figure.</h4>
+        <div class="has-text-centered image-row">
+          <img src="./static/assembly/2-4.png" width="300" class="assembly-image" alt="Step 4">
+        </div>
+      </div>
+      <div class="assembly-step">
+        <h4 class="title is-5">5. Install the powerbank and Quest controller (remove its battery lid first).</h4>
+        <div class="has-text-centered image-row">
+          <img src="./static/assembly/2-5.jpg" width="200" class="assembly-image" alt="Step 5">
+        </div>
+      </div>
+      <div class="assembly-step">
+        <h4 class="title is-5">6. Install the Orange Pi / Raspberry Pi operation system. Activate the I2C interface by "sudo orangepi-config" or "sudo raspi-config". Clone the exUMI code repo and the data collection code is in the ARCap folder.</h4>
+      </div>
+      
+      
     </div>
   </div>
 </section>
