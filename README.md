@@ -25,7 +25,7 @@ Please go to our [project page](https://silicx.github.io/exUMI/) for 3D printing
 
 
 
-**ARCap APK**: Install the apk ([here]./ARCap/arcap_exUMI_release.apk) to the Meta Quest (refer to the installation guide from [ARCap](https://stanford-tml.github.io/ARCap/))
+**ARCap APK**: Install the apk (`exUMI_ARCap_release.apk` in the [arcap](https://github.com/silicx/exUMI/tree/arcap) branch) to the Meta Quest (refer to the installation guide from [ARCap](https://stanford-tml.github.io/ARCap/))
 
 **RaspberryPi / OrangePi**:
 1. Install any OS on the RaspberryPi / OrangePi and setup the network. A static IP is suggested for convienience
