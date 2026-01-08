@@ -50,7 +50,7 @@ See [Data Collection](./DATA_COLLECTION.md) page for details.
 
 ### Our Dataset
 
-Please check our task-specific dataset on [HF](https://huggingface.co/datasets/silicx/exUMI).
+Please check our task-specific dataset on [HF](https://huggingface.co/datasets/silicx/exUMI) and also the [UMI-Data](https://umi-data.github.io/) project.
 
 
 ## Real-world Evaluation
